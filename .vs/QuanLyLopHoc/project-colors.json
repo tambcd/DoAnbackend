@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "60cf6e66-cb9f-4664-bc19-fa9f783f610b": {
+      "ProjectGuid": "60cf6e66-cb9f-4664-bc19-fa9f783f610b",
+      "DisplayName": "QuanLyLopHoc",
+      "ColorIndex": 0
+    },
+    "99fc24a3-7f55-4d3f-b058-95df310fe691": {
+      "ProjectGuid": "99fc24a3-7f55-4d3f-b058-95df310fe691",
+      "DisplayName": "QuanLyLopHocBL",
+      "ColorIndex": 1
+    },
+    "b95aea76-2df7-456d-a267-442b162707df": {
+      "ProjectGuid": "b95aea76-2df7-456d-a267-442b162707df",
+      "DisplayName": "QuanLyLopHocDL",
+      "ColorIndex": 2
+    },
+    "d754ab15-7f5e-4305-965b-8b97439da632": {
+      "ProjectGuid": "d754ab15-7f5e-4305-965b-8b97439da632",
+      "DisplayName": "QuanLyLopHocCommon",
+      "ColorIndex": 3
+    },
+    "2850ac4c-1dfe-4d4e-8c88-6444f86c29e1": {
+      "ProjectGuid": "2850ac4c-1dfe-4d4e-8c88-6444f86c29e1",
+      "DisplayName": "QuanLyLopHocApi",
+      "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 5
+}

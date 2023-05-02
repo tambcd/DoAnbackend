@@ -1,0 +1,17 @@
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\bin\Debug\net6.0\QuanLyLopHocBL.deps.json
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\bin\Debug\net6.0\QuanLyLopHocBL.dll
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\bin\Debug\net6.0\ref\QuanLyLopHocBL.dll
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\bin\Debug\net6.0\QuanLyLopHocBL.pdb
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\bin\Debug\net6.0\QuanLyLopHocCommon.dll
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\bin\Debug\net6.0\QuanLyLopHocDL.dll
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\bin\Debug\net6.0\QuanLyLopHocCommon.pdb
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\bin\Debug\net6.0\QuanLyLopHocDL.pdb
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\obj\Debug\net6.0\QuanLyLopHocBL.csproj.AssemblyReference.cache
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\obj\Debug\net6.0\QuanLyLopHocBL.GeneratedMSBuildEditorConfig.editorconfig
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\obj\Debug\net6.0\QuanLyLopHocBL.AssemblyInfoInputs.cache
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\obj\Debug\net6.0\QuanLyLopHocBL.AssemblyInfo.cs
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\obj\Debug\net6.0\QuanLyLopHocBL.csproj.CoreCompileInputs.cache
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\obj\Debug\net6.0\QuanLyLopHocBL.csproj.CopyComplete
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\obj\Debug\net6.0\QuanLyLopHocBL.dll
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\obj\Debug\net6.0\ref\QuanLyLopHocBL.dll
+D:\DATN\QuanLyLopHoc\QuanLyLopHocBL\obj\Debug\net6.0\QuanLyLopHocBL.pdb
