@@ -1,4 +1,5 @@
-﻿using QuanLyLopHocBL.IService;
+﻿using Microsoft.AspNetCore.Http;
+using QuanLyLopHocBL.IService;
 using QuanLyLopHocCommon.Entity;
 using QuanLyLopHocDL.IReponsitory;
 using System;
@@ -15,6 +16,11 @@ namespace QuanLyLopHocBL.ImplementService
         public AccountBL(IAccountDL accountDL) : base(accountDL)
         {
             _accountDL = accountDL;
+        }
+
+        public int ImportAccout(IFormFile file)
+        {
+            throw new NotImplementedException();
         }
     }
 }

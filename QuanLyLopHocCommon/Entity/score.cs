@@ -15,6 +15,11 @@ namespace QuanLyLopHocCommon.Entity
         public int score_type { get; set; }
         public string subject_name { get; set; }
         public string school_year { get; set; }
-        public Guid account_id { get; set; }
+        public string user_code { get; set; }
+        public DateTime createday { get; set; }
+
+        public List<string> ListerroImport = new List<string>();
+
+
     }
 }

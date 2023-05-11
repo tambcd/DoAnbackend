@@ -68,5 +68,23 @@ namespace QuanLyLopHocCommon.Resource {
                 return ResourceManager.GetString("VN_ErrorSystem", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tệp không tồn tại.
+        /// </summary>
+        public static string VN_FileExist {
+            get {
+                return ResourceManager.GetString("VN_FileExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tệp không đúng định dạng.
+        /// </summary>
+        public static string VN_FileNotFormat {
+            get {
+                return ResourceManager.GetString("VN_FileNotFormat", resourceCulture);
+            }
+        }
     }
 }

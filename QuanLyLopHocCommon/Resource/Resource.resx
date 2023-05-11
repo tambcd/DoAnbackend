@@ -120,4 +120,10 @@
   <data name="VN_ErrorSystem" xml:space="preserve">
     <value>Có lỗi xảy ra vui lòng liên hệ nhà cung cấp</value>
   </data>
+  <data name="VN_FileExist" xml:space="preserve">
+    <value>Tệp không tồn tại</value>
+  </data>
+  <data name="VN_FileNotFormat" xml:space="preserve">
+    <value>Tệp không đúng định dạng</value>
+  </data>
 </root>
