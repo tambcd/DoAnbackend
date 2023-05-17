@@ -20,7 +20,7 @@ namespace QuanLyLopHocBL.ImplementService
             _scoreDL = scoreDL;
         }
 
-        public string ImportScores(IFormFile formFile)
+        public int ImportScores(IFormFile formFile)
         {
             try
             {
@@ -55,61 +55,51 @@ namespace QuanLyLopHocBL.ImplementService
                         Regex regex = new Regex(@"(\d{4}-\d{4})");
                         Match match = regex.Match(yearSchool);
                         string year = match.Groups[1].Value;
-/*                        string seleme = yearSchool.Replace("2020-2021", "KỲ 1");
-*/
+                        /*                        string seleme = yearSchool.Replace("2020-2021", "KỲ 1");
+                        */
 
 
                         for (int row = 11; row <= rowCount; row++)
                         {
                             for (int column = 4; column < columnCout; column = column + 2)
                             {
-                                if(worksheet.Cells[7, column+1].Value == null)
+                                if (worksheet.Cells[7, column + 1].Value == null || ConvertObjectToString(worksheet.Cells[7, column + 1].Value) == "Điểm TBC Lần 1")
                                 {
                                     break;
                                 }
                                 var score = new score()
                                 {
-                                    
-                                    semester =1,
+
+                                    semester = 1,
                                     school_year = year,
-                                    number_credits = ConvertObjectToNumberInt(worksheet.Cells[9, column+1].Value),
-                                    subject_name= ConvertObjectToString(worksheet.Cells[7, column+1].Value),
+                                    number_credits = ConvertObjectToNumberInt(worksheet.Cells[9, column + 1].Value),
+                                    subject_name = ConvertObjectToString(worksheet.Cells[7, column + 1].Value),
                                     user_code = ConvertObjectToString(worksheet.Cells[row, 2].Value),
                                     score_type = 1,
 
                                 };
-                                
-                                if (worksheet.Cells[row, column + 2].Value != null)
+
+                                if (worksheet.Cells[row, column + 2].Value != null && ConvertObjectToString(worksheet.Cells[row, column + 2].Value) != "")
                                 {
                                     score.score_number = ConvertObjectToNumber(worksheet.Cells[row, column + 2].Value);
-                                }
-                                else
-                                {
-                                    score.score_number = ConvertObjectToNumber(worksheet.Cells[row, column +1].Value);
-                                }
-
-                                if (worksheet.Cells[row, column].Value != null || worksheet.Cells[row, column + 1].Value != null)
-                                {
                                     scores.Add(score);
                                 }
-
-
-
-
+                                else if (ConvertObjectToString(worksheet.Cells[row, column + 1].Value) != "" && worksheet.Cells[row, column + 1].Value != null)
+                                {
+                                    score.score_number = ConvertObjectToNumber(worksheet.Cells[row, column + 1].Value);
+                                    scores.Add(score);
+                                }
                             }
-
-
                         }
                     }
                 }
-                return res;
-                /*                return _scoreDL.Import(scores);
-                */
+                return _scoreDL.Import(scores);
+
             }
             catch (Exception ex)
             {
 
-                return "ERROR";
+                return 0; 
             }
         }
         /// <summary>
@@ -137,8 +127,13 @@ namespace QuanLyLopHocBL.ImplementService
                 return 0;
             }
             else
-            {           
-                return Double.Parse(value.ToString());
+            {
+                double number;
+                if (double.TryParse(value.ToString(), out number))
+                {
+                    return number;
+                }
+                return 0;
             }
         }
 

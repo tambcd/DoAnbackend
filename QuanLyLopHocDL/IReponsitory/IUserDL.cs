@@ -9,6 +9,7 @@ namespace QuanLyLopHocDL.IReponsitory
 {
     public interface IUserDL: IBaseDL<user>
     {
+        public IEnumerable<user> GetUserByClass(Guid idClass, string? txtSearch, int PageSize, int PageNumber);
 
     }
 }

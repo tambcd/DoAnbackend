@@ -17,6 +17,20 @@ namespace QuanLyLopHocApi.Controllers
             _scoreDL = scoreDL;
             _scoreBL = scoreBL;
         }
+        [HttpGet("getFilter")]
+        public IActionResult GetByFilter(int PageNumber, int PageSize, string? txtSearch, string? codeUser, string? schoolYear, int? semester)
+        {
+            try
+            {
+                var data = _scoreDL.GetScoresByFilter(PageNumber,PageSize,txtSearch,codeUser,schoolYear,semester);
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return HandelException(ex);
+            }
+
+        }
 
         /// <summary>
         /// nhập khẩu từ excel

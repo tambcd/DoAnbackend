@@ -16,6 +16,27 @@ namespace QuanLyLopHocDL.ImplementReponsitory
         {
         }
 
+        public IEnumerable<score> GetScoresByFilter(int PageNumber,int PageSize,string? txtSearch,string? codeUser,string? schoolYear,int? semester)
+        {
+            if (txtSearch == null)
+            {
+                txtSearch = "";
+            }
+            var sqlcmd = $"proc_ft_score";
+            var dynamicParams = new DynamicParameters();
+            dynamicParams.Add("@PageNumber", PageNumber);
+            dynamicParams.Add("@PageSize", PageSize);
+            dynamicParams.Add("@txtSearch", txtSearch);
+            dynamicParams.Add("@codeUser", codeUser);
+            dynamicParams.Add("@schoolYear", schoolYear);
+            dynamicParams.Add("@semester", semester);
+
+            var data = connection.Query<score>(sql: sqlcmd, param: dynamicParams, commandType: System.Data.CommandType.StoredProcedure).ToList();
+            return data;
+            
+
+        }
+
         public int Import(List<score> scores)
         {
             var rowsEffec = 0;
@@ -33,7 +54,7 @@ namespace QuanLyLopHocDL.ImplementReponsitory
 
                 }
                 transaction.Rollback();
-                return rowsEffec;
+                return 0;
             }
         }
     }

@@ -16,6 +16,6 @@ namespace QuanLyLopHocBL.IService
         /// </summary>
         /// <param name="file">file excel đầu vào</param>
         /// <returns> danh sách tài sản hợp lệ</returns>
-        public string ImportScores(IFormFile file);
+        public int  ImportScores(IFormFile file);
     }
 }

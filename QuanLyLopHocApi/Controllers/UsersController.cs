@@ -18,5 +18,21 @@ namespace QuanLyLopHocApi.Controllers
             _userBL = userBL;
             _userDL = epository;
         }
+        [HttpGet("getClass")]
+        public IActionResult GetByCLass(Guid idClass, string? txtSearch, int PageSize, int PageNumber)
+        {
+            try
+            {
+                var data = _userDL.GetUserByClass(idClass,txtSearch,PageSize, PageNumber);
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return HandelException(ex);
+            }
+
+        }
+
+
     }
 }
