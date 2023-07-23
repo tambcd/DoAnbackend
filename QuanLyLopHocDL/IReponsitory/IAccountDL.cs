@@ -9,6 +9,9 @@ namespace QuanLyLopHocDL.IReponsitory
 {
     public interface IAccountDL : IBaseDL<account>
     {
+        public account Login(string username, string password); 
+
+        public int InsertAccount(AccountUser account);
 
     }
 }

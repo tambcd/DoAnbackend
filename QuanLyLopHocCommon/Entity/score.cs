@@ -9,8 +9,7 @@ namespace QuanLyLopHocCommon.Entity
     public class score
     {
         public Guid score_id { get; set; }
-        public string first_name { get;}
-        public string last_name { get;}
+        public string? full_name { get; }
         public double score_number { get; set; }
         public int semester { get; set; }
         public int number_credits { get; set; }
@@ -18,10 +17,11 @@ namespace QuanLyLopHocCommon.Entity
         public string subject_name { get; set; }
         public string school_year { get; set; }
         public string user_code { get; set; }
-        public DateTime createday { get; set; }
+        public int study_times { get; set; }
+        public DateTime? createday { get; set; }
 
-        public List<string> ListerroImport = new List<string>();
-
+        public List<string>? ListerroImport = new List<string>();
+        public int? TotalRecord { get; set; }
 
     }
 }

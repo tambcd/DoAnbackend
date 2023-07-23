@@ -33,5 +33,16 @@ namespace QuanLyLopHocDL.ImplementReponsitory
             var data = connection.Query<user>(sql: sqlcmd, param: dynamicParams, commandType: System.Data.CommandType.StoredProcedure).ToList();
             return data;
         }
+
+        public user GetUserByIdAccount(Guid id)
+        {
+            var dynamicParams = new DynamicParameters();
+            dynamicParams.Add("@id", id);
+            var sqlcmd = $"SELECT * FROM user u WHERE u.account_id = @id";
+           
+
+            var data = connection.QueryFirstOrDefault<user>(sql: sqlcmd, param: dynamicParams);
+            return data;
+        }
     }
 }

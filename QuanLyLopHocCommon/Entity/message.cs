@@ -10,8 +10,9 @@ namespace QuanLyLopHocCommon.Entity
     {
         public Guid message_id { get; set; }
         public string content { get; set; }
-        public DateTime created_day { get; set; }
+        public DateTime? created_day { get; set; }
         public Guid account_id { get; set; }
-        public Guid chat_room_id { get; set; }
+        public Guid class_room_id { get; set; }
+        public string? full_name { get; }
     }
 }

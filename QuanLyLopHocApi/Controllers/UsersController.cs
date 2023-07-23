@@ -32,6 +32,34 @@ namespace QuanLyLopHocApi.Controllers
             }
 
         }
+     /*   [HttpGet("getReport")]
+        public IActionResult getReport()
+        {
+            try
+            {
+                var data = _userDL.GetReport();
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return HandelException(ex);
+            }
+
+        }*/
+        [HttpGet("getByIdAccount/{idAccount}")]
+        public IActionResult GetByIdAccount(Guid idAccount)
+        {
+            try
+            {
+                var data = _userDL.GetUserByIdAccount(idAccount);
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return HandelException(ex);
+            }
+
+        }
 
 
     }

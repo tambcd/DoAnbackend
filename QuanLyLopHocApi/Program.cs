@@ -21,6 +21,8 @@ builder.Services.AddScoped<IAccountDL, AccountDL>();
 builder.Services.AddScoped<IUserDL, UserDL>();
 builder.Services.AddScoped<IScheduleDL, ScheduleDL>();
 builder.Services.AddScoped<IScoreDL, ScoreDL>();
+builder.Services.AddScoped<IMessageDL, MessageDL>();
+builder.Services.AddScoped<ICommentDL, CommentDL>();
 
 /// <summary>
 /// BLL Interface
@@ -30,6 +32,8 @@ builder.Services.AddScoped<IAccountBL, AccountBL>();
 builder.Services.AddScoped<IUserBL, UserBL>();
 builder.Services.AddScoped<IScheduleBL, ScheduleBL>();
 builder.Services.AddScoped<IScoreBL, ScoreBL>();
+builder.Services.AddScoped<IMessageBL,MessageBL>();
+builder.Services.AddScoped<ICommentBL,CommentBl>();
 
 builder.Services.AddCors();
 var app = builder.Build();

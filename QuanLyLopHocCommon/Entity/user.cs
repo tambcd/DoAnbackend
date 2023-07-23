@@ -8,7 +8,7 @@ namespace QuanLyLopHocCommon.Entity
 {
     public class user
     {
-        public string full_name { get; set; }
+        public string? full_name { get; set; }
         public Guid user_id { get; set; }
         public string first_name { get; set; }
         public string last_name { get; set; }
@@ -20,6 +20,6 @@ namespace QuanLyLopHocCommon.Entity
         public int status { get; set; }
         public Guid account_id { get; set; }
         public string user_code { get; set; }
-        public int TotalRecord { get; set; }
+        public int? TotalRecord { get; set; }
     }
 }

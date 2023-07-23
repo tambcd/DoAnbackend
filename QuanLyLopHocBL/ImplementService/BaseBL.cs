@@ -50,14 +50,7 @@ namespace QuanLyLopHocBL.ImplementService
             {
                 throw new CustomException(QuanLyLopHocCommon.CommonResource.GetResoureString("InvalidInput"), listMsgEr);
             }
-        }
-        /// <summary>
-        /// thực hiện xửa 1 đối  tường 
-        /// @created by : tvTam
-        /// </summary>
-        /// <param name="entity">thông tin đối tượng </param>
-        /// <returns></returns>
-        /// <exception cref="CustomException">trả về lỗi </exception>
+        }       
         public int UpdateSevices(Entity entity)
         {
             // check validate chung

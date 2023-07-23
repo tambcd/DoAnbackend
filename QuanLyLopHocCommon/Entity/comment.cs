@@ -12,7 +12,8 @@ namespace QuanLyLopHocCommon.Entity
         public Guid schedule_id { get; set; }
         public Guid account_id { get; set; }
         public string comment_content { get; set; }
-        public DateTime comment_time { get; set; }
-        
+        public DateTime? comment_time { get; set; }
+        public string? full_name { get; }
+
     }
 }

@@ -104,6 +104,21 @@ namespace QuanLyLopHocApi.Controllers
             }
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult Delete(Guid id)
+        {
+            try
+            {
+                var data = _baseDL.Delete(id);
+                return StatusCode(200, data);
+
+            }
+            catch (Exception ex)
+            {
+
+                return HandelException(ex);
+            }
+        }
 
         [NonAction]
         public IActionResult HandelException(Exception ex)

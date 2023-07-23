@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace QuanLyLopHocCommon.Entity
 {
-    public class color
+    public class AccountUser
     {
-        public Guid color_id { get; set; }
-        public string color_code { get; set; }
-        public string color_name { get; set; }
+        public user user { get; set; }
+        public account userAccount { get; set; }
+       
     }
 }

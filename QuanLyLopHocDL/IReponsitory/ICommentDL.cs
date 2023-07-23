@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace QuanLyLopHocDL.IReponsitory
 {
-    public interface IUserDL: IBaseDL<user>
+    public interface ICommentDL: IBaseDL<comment>
     {
-        public IEnumerable<user> GetUserByClass(Guid idClass, string? txtSearch, int PageSize, int PageNumber);
-
-        public user GetUserByIdAccount(Guid id);
-
+        public IEnumerable<comment> GetComment(Guid id_schedule);
     }
 }
